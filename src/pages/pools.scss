@@ -1,0 +1,39 @@
+.pool-table {
+    padding: 50px 0px;
+}
+
+.pool-table-header {
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    padding: 0px 25px 20px 25px;
+    width: 100%;
+}
+
+.table-head {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #1f2040;
+    text-align: center;
+    &.pool {
+        width: 20%;
+        text-align: center;
+    }
+    &.apy {
+        width: 10%;
+    }
+    &.tvl {
+        width: 18%;
+    }
+    &.apr {
+        width: 12%;
+    }
+    &.strategy {
+        width: 25%;
+    }
+}

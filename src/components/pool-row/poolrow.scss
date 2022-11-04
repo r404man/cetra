@@ -1,0 +1,176 @@
+.poolrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 25px;
+
+    &:hover {
+        background-color: #e8ecfd;
+    }
+}
+
+.poolrow-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.poolrow-title-text {
+    margin-left: 20px;
+    // padding-left: 10px;
+    .title-text {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+
+        color: #1f2040;
+        margin-bottom: 5px;
+    }
+}
+
+.title-subtitles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .title-subtitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 10px;
+        .subtitle-icon {
+            display: flex;
+            margin-right: 3px;
+        }
+    }
+}
+
+.poolrow-title-icons {
+    display: flex;
+    position: relative;
+    .title-icon {
+        display: flex;
+        &:last-child {
+            position: absolute;
+            left: 16px;
+        }
+    }
+}
+
+.subtitle-text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+
+    color: #1f2040;
+}
+
+.poolrow-apy {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+
+    color: #5555ff;
+}
+
+.poolrow-tvl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tvl-title {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+
+        margin-bottom: 6px;
+
+        color: #1f2040;
+    }
+
+    .tvl-subtitle {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+
+        color: #1f2040;
+    }
+}
+
+.poolrow-yild {
+    .yild-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 7px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        .item-title {
+            font-family: "Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            margin-right: 50px;
+            color: #1f2040;
+            // width: 40%;
+        }
+        .item-info {
+            font-family: "Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+
+            color: #1f2040;
+            // width: 60%;
+        }
+    }
+}
+
+.poolrow-strategy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .strategy-title {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 4px;
+
+        color: #1f2040;
+    }
+
+    .strategy-subtitle {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+
+        color: #1f2040;
+    }
+}
+
+.poolrow-control {
+    .control {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+
+        color: #ffffff;
+        background-color: #7173fc;
+        border: 1px solid #7173fc;
+        padding: 7px 30px;
+        border-radius: 7px;
+        cursor: pointer;
+        &:hover {
+            background-color: #fff;
+            color: #7173fc;
+        }
+    }
+}
