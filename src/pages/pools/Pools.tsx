@@ -1,10 +1,10 @@
 import React from "react";
-import PoolRow from "../components/pool-row/PoolRow";
+import PoolRow from "../../components/pool-row/PoolRow";
 import "./pools.scss";
 
 function Pools() {
   return (
-    <div>
+    <div className="pool-page">
       <div className="pool-table">
         <div className="pool-table-header">
           <div className="table-head pool">Pool</div>

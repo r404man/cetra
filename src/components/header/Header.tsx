@@ -1,5 +1,6 @@
 import React from "react";
-import Pools from "../../pages/Pools";
+import Farm from "../../pages/farm/Farm";
+import Pools from "../../pages/pools/Pools";
 import Navigation from "../navigation/Navigation";
 import HeaderProfile from "./header-profile/HeaderProfile";
 import "./header.scss";
@@ -20,6 +21,7 @@ function Header() {
           </div>
           <div className="page">
             <Pools />
+            {/* <Farm /> */}
           </div>
         </div>
       </header>

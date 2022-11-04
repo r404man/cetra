@@ -8,6 +8,25 @@
     &:hover {
         background-color: #e8ecfd;
     }
+
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 95%;
+
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        // margin: 0px 25px;
+        height: 1px;
+        background-color: #e8ecfd;
+    }
 }
 
 .poolrow-title {
@@ -17,8 +36,7 @@
 }
 
 .poolrow-title-text {
-    margin-left: 20px;
-    // padding-left: 10px;
+    margin-left: 25px;
     .title-text {
         font-family: "Gilroy";
         font-style: normal;
@@ -27,6 +45,18 @@
 
         color: #1f2040;
         margin-bottom: 5px;
+        padding-bottom: 3px;
+
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 1px;
+            background-color: #e8ecfd;
+        }
     }
 }
 
@@ -34,11 +64,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    span {
+        color: #e8ecfd;
+        margin: 0px 3px;
+    }
     .title-subtitle {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-right: 10px;
+        // margin-right: 10px;
         .subtitle-icon {
             display: flex;
             margin-right: 3px;
@@ -87,8 +121,19 @@
         font-size: 16px;
 
         margin-bottom: 6px;
+        padding-bottom: 3px;
 
         color: #1f2040;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 1px;
+            background-color: #e8ecfd;
+        }
     }
 
     .tvl-subtitle {
@@ -143,6 +188,23 @@
         margin-bottom: 4px;
 
         color: #1f2040;
+
+        padding-bottom: 3px;
+
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            bottom: 0;
+            width: 50%;
+            height: 1px;
+            background-color: #e8ecfd;
+        }
     }
 
     .strategy-subtitle {

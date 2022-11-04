@@ -24,6 +24,7 @@ function PoolRow() {
               </div>
               <div className="subtitle-text">Raydium</div>
             </div>
+            <span>/</span>
             <div className="title-subtitle">
               <div className="subtitle-icon">
                 <img src={logo1} alt="" />
