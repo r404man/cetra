@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Farm from "../../pages/farm/Farm";
 import Pools from "../../pages/pools/Pools";
 import Navigation from "../navigation/Navigation";
@@ -14,14 +15,15 @@ function Header() {
         </div>
         <div className="header-nav">
           <div className="header-nav-links">
-            <div className="header-breadcrumbs">
-              Chamber’s farm
-            </div>
+            <div className="header-breadcrumbs">Chamber’s farm</div>
             <HeaderProfile />
           </div>
           <div className="page">
-            <Pools />
-            {/* <Farm /> */}
+            <Routes>
+              <Route path="/" element={<Pools />} />
+              <Route path="/farm" element={<Farm />} />
+              <Route path="/portfolio" element={<Pools />} />
+            </Routes>
           </div>
         </div>
       </header>
