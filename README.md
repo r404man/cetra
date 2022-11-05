@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+Routes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+"/", "/farm" "/portfolio" "/add-collateral" "add-collateral/close-position"
 
 ## Available Scripts
 

@@ -1,15 +1,15 @@
 .navigation {
-    border-right: 1px solid #e8ecfd;
     width: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .header-logo {
     padding-left: 48px;
     padding-top: 21px;
     padding-bottom: 29px;
-    border-bottom: 1px solid #e8ecfd;
+    // border-bottom: 1px solid #e8ecfd;
 }
 
 .navigation-tabs {
@@ -74,4 +74,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.main-navigation {
+    // overflow: hidden;
 }

@@ -11,11 +11,11 @@ function Pools() {
           <div className="table-head apy">APY</div>
           <div className="table-head tvl">TVL</div>
           <div className="table-head apr">Yield (APR)</div>
-          <div className="table-head strategy">
-            Strategy
-          </div>
+          <div className="table-head strategy">Strategy</div>
           <div className="table-head controls"></div>
         </div>
+        <PoolRow />
+        <PoolRow />
         <PoolRow />
         <PoolRow />
         <PoolRow />
