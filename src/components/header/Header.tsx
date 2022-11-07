@@ -21,7 +21,6 @@ function Header() {
 				<div className="header-nav">
 					<div className="header-nav-links">
 						<HeaderBreadcrumbs />
-						{/* <div className="header-breadcrumbs">Chamber’s farm</div> */}
 						<HeaderProfile />
 					</div>
 					<div className="page">
@@ -31,7 +30,9 @@ function Header() {
 							<Route path="/portfolio" element={<Portfolio />} />
 							<Route path="/add-collateral" element={<AddCollateral />}>
 								<Route path="" element={<AddCollateralMainPage />}></Route>
-								<Route path="close-position" element={<ClosePosition />}></Route>
+								<Route
+									path="close-position"
+									element={<ClosePosition />}></Route>
 							</Route>
 						</Routes>
 					</div>

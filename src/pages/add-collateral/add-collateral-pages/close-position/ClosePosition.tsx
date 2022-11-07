@@ -24,22 +24,32 @@ function ClosePosition() {
 					<label className="position-radio">
 						<div className="radio-title">
 							<label className="radio-container">
-								<input type="radio" onChange={() => ({})} checked={true} name="radio" />
+								<input
+									type="radio"
+									onChange={() => ({})}
+									checked={true}
+									name="radio"
+								/>
 								<span className="checkmark"></span>
 							</label>
 							<div className="radio-text">Minimize Trading</div>
 						</div>
 
 						<div className="radio-subtitle">
-							We will convert the minimum required amount of tokens into SOL to pay bak the debt and
-							return the remaining assets to you. This can potentially save on slipage and trading
-							fees
+							We will convert the minimum required amount of tokens into SOL to
+							pay bak the debt and return the remaining assets to you. This can
+							potentially save on slipage and trading fees
 						</div>
 					</label>
 					<label className="position-radio">
 						<div className="radio-title">
 							<label className="radio-container">
-								<input type="radio" onChange={() => ({})} checked={true} name="radio" />
+								<input
+									type="radio"
+									onChange={() => ({})}
+									checked={true}
+									name="radio"
+								/>
 								<span className="checkmark dropdown"></span>
 							</label>
 							<div className="radio-text radio-dropdown-text">Convert to</div>
@@ -49,7 +59,9 @@ function ClosePosition() {
 										<div className="dropdown-header-icon">
 											<img src={logo} alt="" />
 										</div>
-										<div className="dropdown-header-text">{selectedOption || "USDT"}</div>
+										<div className="dropdown-header-text">
+											{selectedOption || "USDT"}
+										</div>
 										<div className="dropdown-header-control">
 											{isOpen ? (
 												<img src={arrow} className="isOpen" alt="" />
@@ -77,20 +89,27 @@ function ClosePosition() {
 							</div>
 						</div>
 						<div className="radio-subtitle">
-							Your position value will all be converted to USDT and returned to you after paying
-							back the debt
+							Your position value will all be converted to USDT and returned to
+							you after paying back the debt
 						</div>
 					</label>
 				</div>
 
-				<div className="close-position-item">
+				<label className="close-position-item">
 					<label className="position-radio">
 						<div className="radio-title">
 							<label className="radio-container">
-								<input type="radio" onChange={() => ({})} checked={true} name="radio" />
+								<input
+									type="radio"
+									onChange={() => ({})}
+									checked={true}
+									name="radio"
+								/>
 								<span className="checkmark"></span>
 							</label>
-							<div className="radio-text partial-close-title">Partial Close</div>
+							<div className="radio-text partial-close-title">
+								Partial Close
+							</div>
 						</div>
 					</label>
 
@@ -133,7 +152,7 @@ function ClosePosition() {
 							Close position
 						</button>
 					</div>
-				</div>
+				</label>
 			</div>
 			{/* <Modal props={"position"} /> */}
 		</div>

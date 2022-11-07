@@ -87,7 +87,7 @@ function PortfolioRow() {
 						/>
 					</svg>
 				</a>
-				<a className="control">Deposit</a>
+				<a className="control">Withdraw</a>
 			</div>
 		</div>
 	);

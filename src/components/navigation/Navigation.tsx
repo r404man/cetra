@@ -1,12 +1,14 @@
 import React from "react";
 import Contacts from "../contacts/Contacts";
 import "./navigation.scss";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navigation() {
+	const activeClassName = "active tabs-link";
+
 	return (
 		<div className="navigation">
-			<div className="header-logo">
+			<Link to={"/"} className="header-logo">
 				<svg
 					width="99"
 					height="35"
@@ -33,25 +35,44 @@ function Navigation() {
 						d="M99 26.9706H95.5087L94.5763 24.5613H88.9823L88.05 26.9706H84.5388L90.0932 13.7388H93.4456L99 26.9706ZM93.4853 21.7569L91.7793 17.4121L90.0932 21.7569H93.4853Z"
 						fill="#1F2040"
 					/>
-					<path d="M7.2468 12.4671H2.74062V32.4891H7.2468V12.4671Z" fill="#1F2040" />
-					<path d="M13.5858 7.76204H9.07964V27.7841H13.5858V7.76204Z" fill="#1F2040" />
-					<path d="M19.9018 14.7381H15.3959V35H19.9018V14.7381Z" fill="#1F2040" />
-					<path d="M26.2181 3.73364H21.7122V23.9956H26.2181V3.73364Z" fill="#1F2040" />
+					<path
+						d="M7.2468 12.4671H2.74062V32.4891H7.2468V12.4671Z"
+						fill="#1F2040"
+					/>
+					<path
+						d="M13.5858 7.76204H9.07964V27.7841H13.5858V7.76204Z"
+						fill="#1F2040"
+					/>
+					<path
+						d="M19.9018 14.7381H15.3959V35H19.9018V14.7381Z"
+						fill="#1F2040"
+					/>
+					<path
+						d="M26.2181 3.73364H21.7122V23.9956H26.2181V3.73364Z"
+						fill="#1F2040"
+					/>
 					<path d="M24.1795 0H23.7354V23.9739H24.1795V0Z" fill="#1F2040" />
-					<path d="M11.4976 9.23585H11.0535V30.8025H11.4976V9.23585Z" fill="#1F2040" />
+					<path
+						d="M11.4976 9.23585H11.0535V30.8025H11.4976V9.23585Z"
+						fill="#1F2040"
+					/>
 					<path
 						d="M3.62692 34.9783C5.63001 34.9783 7.25384 33.6256 7.25384 31.957C7.25384 30.2884 5.63001 28.9357 3.62692 28.9357C1.62383 28.9357 0 30.2884 0 31.957C0 33.6256 1.62383 34.9783 3.62692 34.9783Z"
 						fill="#1F2040"
 					/>
 				</svg>
-			</div>
+			</Link>
 			<div className="navigation-tabs">
-				<Link to="/farm" className="tabs-link active">
+				<NavLink to="/farm" className="tabs-link">
 					Chamber’s farm
-				</Link>
-				<Link to="portfolio" className="tabs-link">
+				</NavLink>
+				<NavLink
+					to="portfolio"
+					className={({ isActive }) =>
+						isActive ? activeClassName : "tabs-link"
+					}>
 					Portfolio
-				</Link>
+				</NavLink>
 			</div>
 			<div className="additional-tabs">
 				<a href="" className="addition-tab">

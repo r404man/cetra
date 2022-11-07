@@ -2,6 +2,7 @@ import React from "react";
 import "./poolrow.scss";
 import logo from "./../../assets/pool/logo1.png";
 import logo1 from "./../../assets/pool/title-logo-1.png";
+import { Link } from "react-router-dom";
 
 function PoolRow() {
 	return (
@@ -54,7 +55,9 @@ function PoolRow() {
 				<div className="strategy-subtitle">3x Leverage</div>
 			</div>
 			<div className="poolrow-control">
-				<a className="control">Deposit</a>
+				<Link to={"/add-collateral"} className="control">
+					Deposit
+				</Link>
 			</div>
 		</div>
 	);

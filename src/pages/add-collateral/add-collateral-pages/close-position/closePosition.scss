@@ -115,6 +115,13 @@
     box-shadow: 0px 0px 38px 5px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    &:hover {
+        border-color: #7173fc;
+        cursor: pointer;
+    }
 }
 
 .close-position-submit {
