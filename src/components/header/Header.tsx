@@ -12,33 +12,33 @@ import HeaderProfile from "./header-profile/HeaderProfile";
 import "./header.scss";
 
 function Header() {
-  return (
-    <>
-      <header>
-        <div className="main-navigation" id="main-navigation">
-          <Navigation />
-        </div>
-        <div className="header-nav">
-          <div className="header-nav-links">
-            <HeaderBreadcrumbs />
-            {/* <div className="header-breadcrumbs">Chamber’s farm</div> */}
-            <HeaderProfile />
-          </div>
-          <div className="page">
-            <Routes>
-              <Route path="/" element={<Pools />} />
-              <Route path="/farm" element={<Farm />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/add-collateral" element={<AddCollateral />}>
-                <Route path="" element={<AddCollateralMainPage />}></Route>
-                <Route path="close-position" element={<ClosePosition />}></Route>
-              </Route>
-            </Routes>
-          </div>
-        </div>
-      </header>
-    </>
-  );
+	return (
+		<>
+			<header>
+				<div className="main-navigation" id="main-navigation">
+					<Navigation />
+				</div>
+				<div className="header-nav">
+					<div className="header-nav-links">
+						<HeaderBreadcrumbs />
+						{/* <div className="header-breadcrumbs">Chamber’s farm</div> */}
+						<HeaderProfile />
+					</div>
+					<div className="page">
+						<Routes>
+							<Route path="/" element={<Pools />} />
+							<Route path="/farm" element={<Farm />} />
+							<Route path="/portfolio" element={<Portfolio />} />
+							<Route path="/add-collateral" element={<AddCollateral />}>
+								<Route path="" element={<AddCollateralMainPage />}></Route>
+								<Route path="close-position" element={<ClosePosition />}></Route>
+							</Route>
+						</Routes>
+					</div>
+				</div>
+			</header>
+		</>
+	);
 }
 
 export default Header;

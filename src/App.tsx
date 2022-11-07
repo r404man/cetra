@@ -4,13 +4,13 @@ import "./App.scss";
 import Header from "./components/header/Header";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-      </div>
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<div className="App">
+				<Header />
+			</div>
+		</BrowserRouter>
+	);
 }
 
 export default App;
