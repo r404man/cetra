@@ -10,6 +10,9 @@
         margin-bottom: 23px;
     }
 }
+.farm-page {
+    height: 100vh;
+}
 .farm-title {
     display: flex;
     flex-direction: row;
@@ -302,4 +305,17 @@
             color: #7173fc;
         }
     }
+}
+
+.farm-form-submit button:disabled {
+    opacity: 0.3 !important;
+    &:hover {
+        background-color: #7173fc;
+        color: white;
+        cursor: unset;
+    }
+}
+
+.touched {
+    color: #1f2040 !important;
 }

@@ -31,6 +31,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
     .icon-control {
         display: flex;
         background: #ffffff;
@@ -43,6 +45,16 @@
             background-color: #7173fc;
             svg path {
                 fill: #fff;
+            }
+        }
+        &.share {
+            opacity: 0.3;
+            cursor: unset;
+            &:hover {
+                background-color: white;
+                svg path {
+                    fill: #7173fc;
+                }
             }
         }
     }

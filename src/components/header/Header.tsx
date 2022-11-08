@@ -26,7 +26,7 @@ function Header() {
 					<div className="page">
 						<Routes>
 							<Route path="/" element={<Pools />} />
-							<Route path="/farm" element={<Farm />} />
+							<Route path="/:id" element={<Farm />} />
 							<Route path="/portfolio" element={<Portfolio />} />
 							<Route path="/add-collateral" element={<AddCollateral />}>
 								<Route path="" element={<AddCollateralMainPage />}></Route>

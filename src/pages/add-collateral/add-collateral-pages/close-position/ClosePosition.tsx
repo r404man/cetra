@@ -14,7 +14,20 @@ function ClosePosition() {
 	const onOptionClicked = (value: any) => () => {
 		setSelectedOption(value);
 		setIsOpen(false);
-		console.log(selectedOption);
+	};
+
+	const min = 1;
+	const max = 100;
+
+	const [value, setValue] = useState(100);
+
+	const handleChange = (event: any) => {
+		if (!isNaN(event.target.value)) {
+			const value = Math.max(min, Math.min(max, Number(event.target.value)));
+			setValue(value);
+		} else {
+			setValue(1);
+		}
 	};
 
 	return (
@@ -115,7 +128,13 @@ function ClosePosition() {
 
 					<div className="close-position-input">
 						<div className="close-position-input form-item-input">
-							<input type="text" className="item-input" placeholder="0.00" />
+							<input
+								type="text"
+								className="item-input"
+								value={value}
+								onChange={handleChange}
+								placeholder="100%"
+							/>
 							<div className="item-input-text">
 								<svg
 									width="33"
@@ -160,6 +179,6 @@ function ClosePosition() {
 }
 
 export default ClosePosition;
-function styled(arg0: string) {
-	throw new Error("Function not implemented.");
-}
+// function styled(arg0: string) {
+// 	throw new Error("Function not implemented.");
+// }

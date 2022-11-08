@@ -125,7 +125,8 @@ function Modal(props: any) {
 		modal = {
 			type: "position",
 			title: "Position Closed",
-			subtitle: "Rewards are already in your wallet. Earned by Cetra for you with love"
+			subtitle:
+				"Rewards are already in your wallet. Earned by Cetra for you with love"
 		};
 	} else {
 		modal = {

@@ -78,20 +78,11 @@ function AddCollateral() {
 						className={({ isActive }) =>
 							isActive ? activeClassName : "collateral-page-control"
 						}
-						to="/add-collateral/close-position"
-						// className="collateral-page-control"
-					>
+						to="/add-collateral/close-position">
 						Close position
 					</NavLink>
-					<NavLink
-						className={({ isActive }) =>
-							isActive ? activeClassName : "collateral-page-control"
-						}
-						to="/add-collateral/stats"
-						//  className="collateral-page-control"
-					>
-						Stats
-					</NavLink>
+
+					<a className="collateral-page-control stats">Stats</a>
 				</div>
 			</div>
 			<Outlet />

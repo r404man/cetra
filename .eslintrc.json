@@ -19,6 +19,7 @@
 	"rules": {
 		"react/react-in-jsx-scope": "off",
 		"indent": ["error", "tab"],
-		"prettier/prettier": [2, { "useTabs": true }]
+		"prettier/prettier": [2, { "useTabs": true }],
+		"ident": "off"
 	}
 }

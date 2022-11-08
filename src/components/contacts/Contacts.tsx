@@ -9,20 +9,24 @@ function Contacts() {
 	return (
 		<div className="contacts">
 			<div className="contacts-icons">
-				<div className="contacts-icon">
+				<a href="https://twitter.com/CetraFinance" className="contacts-icon">
 					<img src={twitterLogo} alt="twitter logo" />
-				</div>
+				</a>
 				<div className="contacts-icon">
 					<img src={discordLogo} alt="" />
 				</div>
-				<div className="contacts-icon">
+				<a href="https://medium.com/@cetrafinance" className="contacts-icon">
 					<img src={mediumLogo} alt="" />
-				</div>
+				</a>
 			</div>
-			<div className="contacts-title">
+			<a href="https://cetra.gitbook.io/welcome/" className="contacts-title">
 				How it works <br /> Contact us
-			</div>
-			<div className="contacts-subtitle">Cetra Labs, 2022</div>
+			</a>
+			<a
+				href="https://cetra.gitbook.io/welcome/official-links"
+				className="contacts-subtitle">
+				Cetra Labs, 2022
+			</a>
 		</div>
 	);
 }

@@ -44,20 +44,24 @@ function Portfolio() {
 					<div className="positions-title-icon">1</div>
 				</div>
 
-				<div className="pool-table">
-					<div className="pool-table-header portfolio-table-header">
-						<div className="table-head pool">Pool</div>
-						<div className="table-head apy">APY</div>
-						<div className="table-head tvl">Total Position</div>
-						<div className="table-head apr">Farmed</div>
-						<div className="table-head strategy">Strategy</div>
-						<div className="table-head controls"></div>
-					</div>
-					<PortfolioRow />
-					<PortfolioRow />
-					<PortfolioRow />
-					<PortfolioRow />
-				</div>
+				<table className="pool-table portfolio-table">
+					<thead className="portfolio-table-header">
+						<tr>
+							<th className="table-head pool">Pool</th>
+							<th className="table-head apy">APY</th>
+							<th className="table-head tvl">Total Position</th>
+							<th className="table-head apr">Farmed</th>
+							<th className="table-head strategy">Strategy</th>
+							<th className="table-head controls"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<PortfolioRow />
+						<PortfolioRow />
+						<PortfolioRow />
+						<PortfolioRow />
+					</tbody>
+				</table>
 			</div>
 		</div>
 	);

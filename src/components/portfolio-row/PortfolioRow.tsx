@@ -2,13 +2,14 @@ import React from "react";
 import "./portfoliorow.scss";
 import logo from "./../../assets/pool/logo1.png";
 import logo1 from "./../../assets/pool/title-logo-1.png";
-import settings from "./../../assets/settings.svg";
-import share from "./../../assets/share.svg";
+import { Link } from "react-router-dom";
+// import settings from "./../../assets/settings.svg";
+// import share from "./../../assets/share.svg";
 
 function PortfolioRow() {
 	return (
-		<div className="poolrow">
-			<div className="poolrow-title portfolio-row-title">
+		<tr className="poolrow">
+			<td className="poolrow-title portfolio-row-title">
 				<div className="poolrow-title-icons">
 					<div className="title-icon">
 						<img src={logo} alt="" />
@@ -35,22 +36,22 @@ function PortfolioRow() {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className="poolrow-apy portfolio-apy">36.22%</div>
-			<div className="poolrow-tvl">
+			</td>
+			<td className="poolrow-apy portfolio-apy">36.22%</td>
+			<td className="poolrow-tvl">
 				<div className="tvl-title position">$8.05M</div>
-			</div>
-			<div className="poolrow-yild">
+			</td>
+			<td className="poolrow-yild">
 				<div className="row-farmed-title">$145.21</div>
 				<div className="row-farmed-subtitle">
 					<span>12$</span> Since Yesterday
 				</div>
-			</div>
-			<div className="poolrow-strategy">
+			</td>
+			<td className="poolrow-strategy">
 				<div className="strategy-title portfolio-strategy">Delta Neutral</div>
-			</div>
-			<div className="poolrow-control portfolio-controls">
-				<a className="icon-control">
+			</td>
+			<td className="poolrow-control portfolio-controls">
+				<Link to={"/add-collateral/"} className="icon-control">
 					<svg
 						width="20"
 						height="20"
@@ -73,11 +74,11 @@ function PortfolioRow() {
 							</clipPath>
 						</defs>
 					</svg>
-				</a>
-				<a className="icon-control">
+				</Link>
+				<a className="icon-control share">
 					<svg
-						width="24"
-						height="24"
+						width="20"
+						height="20"
 						viewBox="0 0 24 24"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg">
@@ -87,9 +88,11 @@ function PortfolioRow() {
 						/>
 					</svg>
 				</a>
-				<a className="control">Withdraw</a>
-			</div>
-		</div>
+				<Link to={"/add-collateral/close-position"} className="control">
+					Withdraw
+				</Link>
+			</td>
+		</tr>
 	);
 }
 

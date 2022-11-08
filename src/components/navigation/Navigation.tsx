@@ -63,7 +63,7 @@ function Navigation() {
 				</svg>
 			</Link>
 			<div className="navigation-tabs">
-				<NavLink to="/farm" className="tabs-link">
+				<NavLink to="/" className="tabs-link">
 					Chamber’s farm
 				</NavLink>
 				<NavLink
@@ -75,7 +75,7 @@ function Navigation() {
 				</NavLink>
 			</div>
 			<div className="additional-tabs">
-				<a href="" className="addition-tab">
+				<a href="https://cetra.gitbook.io/" className="addition-tab">
 					Docs
 				</a>
 			</div>

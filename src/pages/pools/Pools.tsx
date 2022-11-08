@@ -5,22 +5,26 @@ import "./pools.scss";
 function Pools() {
 	return (
 		<div className="pool-page">
-			<div className="pool-table">
-				<div className="pool-table-header">
-					<div className="table-head pool">Pool</div>
-					<div className="table-head apy">APY</div>
-					<div className="table-head tvl">TVL</div>
-					<div className="table-head apr">Yield (APR)</div>
-					<div className="table-head strategy">Strategy</div>
-					<div className="table-head controls"></div>
-				</div>
-				<PoolRow />
-				<PoolRow />
-				<PoolRow />
-				<PoolRow />
-				<PoolRow />
-				<PoolRow />
-			</div>
+			<table className="pool-table">
+				<thead className="pool-table-header">
+					<tr>
+						<th className="table-head pool">Pool</th>
+						<th className="table-head apy">APY</th>
+						<th className="table-head tvl">TVL</th>
+						<th className="table-head apr">Yield (APR)</th>
+						<th className="table-head strategy">Strategy</th>
+						<th className="table-head controls"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<PoolRow />
+					<PoolRow />
+					<PoolRow />
+					<PoolRow />
+					<PoolRow />
+					<PoolRow />
+				</tbody>
+			</table>
 		</div>
 	);
 }

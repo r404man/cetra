@@ -38,3 +38,11 @@
 
     color: #ffffff;
 }
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    a {
+        text-decoration: none;
+    }
+}

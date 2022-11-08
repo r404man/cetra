@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 function PoolRow() {
 	return (
-		<div className="poolrow">
-			<div className="poolrow-title">
+		<tr className="poolrow">
+			<td className="poolrow-title">
 				<div className="poolrow-title-icons">
 					<div className="title-icon">
 						<img src={logo} alt="" />
@@ -34,13 +34,13 @@ function PoolRow() {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className="poolrow-apy">36.22%</div>
-			<div className="poolrow-tvl">
+			</td>
+			<td className="poolrow-apy">36.22%</td>
+			<td className="poolrow-tvl">
 				<div className="tvl-title">$8.05M</div>
 				<div className="tvl-subtitle">(24.8M on dex)</div>
-			</div>
-			<div className="poolrow-yild">
+			</td>
+			<td className="poolrow-yild">
 				<div className="yild-item">
 					<div className="item-title">Total APR:</div>
 					<div className="item-info">31.17%</div>
@@ -49,17 +49,17 @@ function PoolRow() {
 					<div className="item-title">Daily APR:</div>
 					<div className="item-info">0.07%</div>
 				</div>
-			</div>
-			<div className="poolrow-strategy">
+			</td>
+			<td className="poolrow-strategy">
 				<div className="strategy-title">Delta Neutral</div>
 				<div className="strategy-subtitle">3x Leverage</div>
-			</div>
-			<div className="poolrow-control">
-				<Link to={"/add-collateral"} className="control">
+			</td>
+			<td className="poolrow-control">
+				<Link to={"/stSOL-USDC"} className="control">
 					Deposit
 				</Link>
-			</div>
-		</div>
+			</td>
+		</tr>
 	);
 }
 
