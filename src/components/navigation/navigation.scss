@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    position: relative;
+    // position: relative;
 }
 
 .header-logo {
@@ -74,6 +74,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // position: fixed;
+    // bottom: 0;
+    // width: 10%;
+    // left: 1%;
 }
 
 .main-navigation {

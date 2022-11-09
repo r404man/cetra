@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import "./contacts.scss";
 
 import discordLogo from "./../../assets/contacts/discord.svg";

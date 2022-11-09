@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import ClosePosition from "../../pages/add-collateral/add-collateral-pages/close-position/ClosePosition";
 import AddCollateralMainPage from "../../pages/add-collateral/add-collateral-pages/main-page/AddCollateralMainPage";
@@ -12,6 +12,14 @@ import HeaderProfile from "./header-profile/HeaderProfile";
 import "./header.scss";
 
 function Header() {
+	const [height, setHeight] = useState(0);
+
+	useEffect(() => {
+		setHeight(document.documentElement.scrollHeight);
+	});
+
+	console.log(height);
+
 	return (
 		<>
 			<header>

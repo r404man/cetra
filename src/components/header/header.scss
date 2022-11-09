@@ -1,8 +1,8 @@
 header {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    position: relative;
+    // flex-direction: row;
+    // align-items: flex-start;
+    // position: relative;
     &::after {
         content: "";
         position: absolute;
@@ -23,7 +23,7 @@ header {
 .main-navigation {
     display: flex;
     width: 24%;
-    height: 100vh;
+    // height: 100vh;
 }
 
 .header-nav-links {
