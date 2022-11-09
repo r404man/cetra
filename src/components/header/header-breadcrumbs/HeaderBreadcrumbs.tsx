@@ -16,6 +16,7 @@ function HeaderBreadcrumbs(props: any) {
 				Chamber’s farm
 			</NavLink>
 			{pathArr.map((path: string) => {
+				path = path.charAt(0).toUpperCase() + path.slice(1);
 				return (
 					<div key={path}>
 						<span>/</span>

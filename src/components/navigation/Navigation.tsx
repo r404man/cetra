@@ -75,7 +75,11 @@ function Navigation() {
 				</NavLink>
 			</div>
 			<div className="additional-tabs">
-				<a href="https://cetra.gitbook.io/" className="addition-tab">
+				<a
+					rel="noreferrer"
+					target="_blank"
+					href="https://cetra.gitbook.io/"
+					className="addition-tab">
 					Docs
 				</a>
 			</div>

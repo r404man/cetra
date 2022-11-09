@@ -9,20 +9,34 @@ function Contacts() {
 	return (
 		<div className="contacts">
 			<div className="contacts-icons">
-				<a href="https://twitter.com/CetraFinance" className="contacts-icon">
+				<a
+					rel="noreferrer"
+					target="_blank"
+					href="https://twitter.com/CetraFinance"
+					className="contacts-icon">
 					<img src={twitterLogo} alt="twitter logo" />
 				</a>
 				<div className="contacts-icon">
 					<img src={discordLogo} alt="" />
 				</div>
-				<a href="https://medium.com/@cetrafinance" className="contacts-icon">
+				<a
+					rel="noreferrer"
+					target="_blank"
+					href="https://medium.com/@cetrafinance"
+					className="contacts-icon">
 					<img src={mediumLogo} alt="" />
 				</a>
 			</div>
-			<a href="https://cetra.gitbook.io/welcome/" className="contacts-title">
+			<a
+				rel="noreferrer"
+				target="_blank"
+				href="https://cetra.gitbook.io/welcome/"
+				className="contacts-title">
 				How it works <br /> Contact us
 			</a>
 			<a
+				rel="noreferrer"
+				target="_blank"
 				href="https://cetra.gitbook.io/welcome/official-links"
 				className="contacts-subtitle">
 				Cetra Labs, 2022
