@@ -5,72 +5,75 @@ import { useForm } from "react-hook-form";
 
 function form(props: any) {
 	const formProp = props.props;
-	const balance = 21.95;
+	const balance = parseFloat("21.95");
 
 	const { register, handleSubmit } = useForm({
 		mode: "onChange"
 	});
 
-	const onSubmit = (data: any) => {
-		console.log(value, secondValue);
-	};
+	const [formState, setFormState] = useState({
+		num1Valid: false,
+		num2Valid: false,
+		formValid: false
+	});
 
-	// const [value, setValue] = useState(balance);
-	const [secondValue, setSecondValue] = useState(0.0);
+	const [secondValue, setSecondValue] = useState<string>("");
+	const [value, setValue] = useState<string>("");
 
 	function changeValue(percent: number) {
 		const num = (balance * percent) / 100;
-		setValue(num);
-		setIsFormValid(true);
+
+		setFormState({ formValid: true, num1Valid: true, num2Valid: true });
+		setValue(num.toString());
 	}
 
 	function changeSecondValue(percent: number) {
 		const num = (balance * percent) / 100;
-		setSecondValue(num);
-		setIsFormValid(true);
+
+		setSecondValue(num.toString());
+		setFormState({ formValid: true, num1Valid: true, num2Valid: true });
 	}
 
-	const min = 0;
-	const max = balance;
-
-	const [value, setValue] = useState(0.0);
-
-	const formValidation = {
-		num1Valid: false,
-		num2Valid: false,
-		formValid: false
-	};
-
-	const [isFormValid, setIsFormValid] = useState(false);
-
-	const validateForm = (num: any) => {
-		if (num !== 0) {
-			setIsFormValid(true);
-		}
-	};
-
 	const handleChange = (event: any) => {
-		if (!isNaN(event.target.value)) {
-			const value = Math.max(min, Math.min(max, Number(event.target.value)));
-			setValue(value);
-			validateForm(value);
-		} else {
-			setValue(min);
+		const inputValue = event.target.value;
+
+		if (isNaN(inputValue)) setValue("");
+		else {
+			setValue(`${inputValue}`);
+		}
+		if (parseFloat(inputValue) > balance) {
+			setFormState({ ...formState, num2Valid: false });
+			addClass(event, "error");
+		}
+		if (parseFloat(inputValue) <= balance) {
+			event.target.classList.remove("error");
+			setFormState({ ...formState, num2Valid: true });
 		}
 	};
 
 	const handleSecondChange = (event: any) => {
-		if (!isNaN(event.target.value)) {
-			const value = Math.max(min, Math.min(max, Number(event.target.value)));
-			setSecondValue(value);
-			validateForm(value);
-		} else {
-			setSecondValue(min);
+		const inputValue = event.target.value;
+
+		if (isNaN(inputValue)) setSecondValue("");
+		else {
+			setSecondValue(`${inputValue}`);
+		}
+		if (parseFloat(inputValue) > balance) {
+			setFormState({ ...formState, num2Valid: false });
+			addClass(event, "error");
+		}
+		if (parseFloat(inputValue) <= balance) {
+			event.target.classList.remove("error");
+			setFormState({ ...formState, num2Valid: true });
 		}
 	};
 
-	const addClass = (event: any) => {
-		event.target.classList.add("touched");
+	const addClass = (event: any, className: string) => {
+		event.target.classList.add(className);
+	};
+
+	const onSubmit = (data: any) => {
+		console.log(value, secondValue);
 	};
 
 	return (
@@ -82,14 +85,13 @@ function form(props: any) {
 					</div>
 					<div className="form-item-input">
 						<input
-							type="number"
+							type="text"
 							className="item-input"
 							placeholder="0.00"
 							value={value}
-							step="any"
 							{...register("number1", { required: true })}
 							onChange={handleChange}
-							onClick={addClass}
+							onClick={(event) => addClass(event, "touched")}
 						/>
 						<div className="item-input-icon">
 							<img src={logo1} width="30" height="30" alt="" />
@@ -117,14 +119,13 @@ function form(props: any) {
 					</div>
 					<div className="form-item-input">
 						<input
-							type="number"
+							type="text"
 							className="item-input"
 							placeholder="0.00"
 							value={secondValue}
-							step="any"
 							{...register("number2", { required: true })}
 							onChange={handleSecondChange}
-							onClick={addClass}
+							onClick={(event) => addClass(event, "touched")}
 						/>
 						<div className="item-input-icon">
 							<img src={logo1} width="30" height="30" alt="" />
@@ -148,9 +149,7 @@ function form(props: any) {
 				</div>
 			</div>
 			<div className="farm-form-submit">
-				<button type="submit" disabled={!isFormValid}>
-					{formProp ? "Add Collateral" : "Farm"}
-				</button>
+				<button type="submit">{formProp ? "Add Collateral" : "Farm"}</button>
 			</div>
 		</form>
 	);

@@ -18,7 +18,7 @@ function Header() {
 		setHeight(document.documentElement.scrollHeight);
 	});
 
-	console.log(height);
+	// console.log(height);
 
 	return (
 		<>
