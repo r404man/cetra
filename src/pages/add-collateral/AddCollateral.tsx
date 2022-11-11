@@ -1,7 +1,7 @@
 import React from "react";
 import "./addCollateral.scss";
-import logo from "./../../assets/logomark.png";
-import logo1 from "../../assets/logomark2.png";
+import logo1 from "./../../assets/T.svg";
+import logo from "../../assets/R.svg";
 import { Link, NavLink, Outlet } from "react-router-dom";
 
 function AddCollateral() {
@@ -14,10 +14,10 @@ function AddCollateral() {
 					<div className="page-info-title">
 						<div className="poolrow-title-icons collateral-title-icons">
 							<div className="title-icon">
-								<img src={logo1} alt="" />
+								<img width={27} height={27} src={logo1} alt="" />
 							</div>
 							<div className="title-icon">
-								<img src={logo1} alt="" />
+								<img width={27} height={27} src={logo1} alt="" />
 							</div>
 						</div>
 						<div className="farm-title">
@@ -25,14 +25,14 @@ function AddCollateral() {
 							<div className="farm-title-icons">
 								<div className="title-icon">
 									<div className="title-icon-image">
-										<img src={logo} alt="" />
+										<img height={13} width={13} src={logo} alt="" />
 									</div>
 									<div className="title-icon-text">Raydium</div>
 								</div>
 								<span>/</span>
 								<div className="title-icon">
 									<div className="title-icon-image">
-										<img src={logo} alt="" />
+										<img height={13} width={13} src={logo} alt="" />
 									</div>
 									<div className="title-icon-text">Tulip</div>
 								</div>

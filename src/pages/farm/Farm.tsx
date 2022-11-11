@@ -1,7 +1,7 @@
 import React from "react";
 import "./farm.scss";
-import logo from "./../../assets/logomark.png";
-import logo1 from "../../assets/logomark2.png";
+import logo from "./../../assets/R.svg";
+import logo1 from "../../assets/T.svg";
 import Form from "../../components/form/Form";
 import Tabs from "../../components/tabs/Tabs";
 
@@ -16,14 +16,14 @@ function Farm() {
 					<div className="farm-title-icons">
 						<div className="title-icon">
 							<div className="title-icon-image">
-								<img src={logo} alt="" />
+								<img width={14} height={14} src={logo} alt="" />
 							</div>
 							<div className="title-icon-text">Raydium</div>
 						</div>
 						<span>/</span>
 						<div className="title-icon">
 							<div className="title-icon-image">
-								<img src={logo} alt="" />
+								<img width={14} height={14} src={logo} alt="" />
 							</div>
 							<div className="title-icon-text">Tulip</div>
 						</div>

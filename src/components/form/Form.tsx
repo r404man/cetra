@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo1 from "../../assets/logomark2.png";
+import logo1 from "../../assets/usd-coin-usdc-logo1.svg";
 
 import { useForm } from "react-hook-form";
 

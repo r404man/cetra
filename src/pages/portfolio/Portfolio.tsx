@@ -10,7 +10,7 @@ function Portfolio() {
 				<div className="perfomance-title">
 					<div className="perfomance-title-text">Portfolio Perfomance</div>
 					<div className="perfomance-title-icon">
-						<img src={icon} alt="" />
+						<img width={22} height={22} src={icon} alt="" />
 					</div>
 				</div>
 				<div className="perfomance-details">

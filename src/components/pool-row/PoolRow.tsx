@@ -1,7 +1,7 @@
 import React from "react";
 import "./poolrow.scss";
-import logo from "./../../assets/pool/logo1.png";
-import logo1 from "./../../assets/pool/title-logo-1.png";
+import logo1 from "./../../assets/R.svg";
+import logo from "./../../assets/usd-coin-usdc-logo1.svg";
 import { Link } from "react-router-dom";
 
 function PoolRow() {
@@ -10,10 +10,10 @@ function PoolRow() {
 			<td className="poolrow-title">
 				<div className="poolrow-title-icons">
 					<div className="title-icon">
-						<img src={logo} alt="" />
+						<img width={27} height={27} src={logo} alt="" />
 					</div>
 					<div className="title-icon">
-						<img src={logo} alt="" />
+						<img width={27} height={27} src={logo} alt="" />
 					</div>
 				</div>
 				<div className="poolrow-title-text">
@@ -21,14 +21,14 @@ function PoolRow() {
 					<div className="title-subtitles">
 						<div className="title-subtitle">
 							<div className="subtitle-icon">
-								<img src={logo1} alt="" />
+								<img width={11} height={11} src={logo1} alt="" />
 							</div>
 							<div className="subtitle-text">Raydium</div>
 						</div>
 						<span>/</span>
 						<div className="title-subtitle">
 							<div className="subtitle-icon">
-								<img src={logo1} alt="" />
+								<img width={11} height={11} src={logo1} alt="" />
 							</div>
 							<div className="subtitle-text">Tulip</div>
 						</div>

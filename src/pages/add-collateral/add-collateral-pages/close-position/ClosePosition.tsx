@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "../../../../components/modal/Modal";
 import "./closePosition.scss";
-import logo from "./../../../../assets/dropdown-logo.png";
+import logo from "./../../../../assets/usd-coin-usdc-logo1.svg";
 import arrow from "./../../../../assets/arrow-down.svg";
 const options = ["USDT", "USDС", "SOL"];
 
@@ -70,7 +70,7 @@ function ClosePosition() {
 								<div className="dropdown-container">
 									<div className="dropdown-header" onClick={toggling}>
 										<div className="dropdown-header-icon">
-											<img src={logo} alt="" />
+											<img height={19} width={19} src={logo} alt="" />
 										</div>
 										<div className="dropdown-header-text">
 											{selectedOption || "USDT"}
@@ -91,7 +91,7 @@ function ClosePosition() {
 														key={option}
 														onClick={onOptionClicked(option)}
 														className="dropdown-list-item">
-														<img src={logo} alt="" />
+														<img width={19} height={19} src={logo} alt="" />
 														{option}
 													</div>
 												))}
