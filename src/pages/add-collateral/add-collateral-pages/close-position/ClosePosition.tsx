@@ -1,13 +1,23 @@
 import React, { useState } from "react";
 import Modal from "../../../../components/modal/Modal";
 import "./closePosition.scss";
-import logo from "./../../../../assets/usd-coin-usdc-logo1.svg";
+import t from "./../../../../assets/T.svg";
+import sol from "./../../../../assets/sol.svg";
+import logo from "./../../../../assets/usdc.svg";
 import arrow from "./../../../../assets/arrow-down.svg";
-const options = ["USDT", "USDС", "SOL"];
+
+const options = [
+	{ name: "USDT", url: t },
+	{ name: "USDС", url: logo },
+	{ name: "SOL", url: sol }
+];
 
 function ClosePosition() {
 	const [isOpen, setIsOpen] = useState(false);
-	const [selectedOption, setSelectedOption] = useState(null);
+	const [selectedOption, setSelectedOption] = useState({
+		name: "USDC",
+		url: logo
+	});
 
 	const toggling = () => setIsOpen(!isOpen);
 
@@ -70,10 +80,15 @@ function ClosePosition() {
 								<div className="dropdown-container">
 									<div className="dropdown-header" onClick={toggling}>
 										<div className="dropdown-header-icon">
-											<img height={19} width={19} src={logo} alt="" />
+											<img
+												height={19}
+												width={19}
+												src={selectedOption.url}
+												alt=""
+											/>
 										</div>
 										<div className="dropdown-header-text">
-											{selectedOption || "USDT"}
+											{selectedOption!.name}
 										</div>
 										<div className="dropdown-header-control">
 											{isOpen ? (
@@ -88,11 +103,16 @@ function ClosePosition() {
 											<div className="dropdown-list">
 												{options.map((option) => (
 													<div
-														key={option}
+														key={option.name}
 														onClick={onOptionClicked(option)}
 														className="dropdown-list-item">
-														<img width={19} height={19} src={logo} alt="" />
-														{option}
+														<img
+															width={19}
+															height={19}
+															src={option.url}
+															alt=""
+														/>
+														{option.name}
 													</div>
 												))}
 											</div>

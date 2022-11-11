@@ -1,7 +1,7 @@
 import React from "react";
 import "./tabs.scss";
-import logo from "./../../assets/T.svg";
-import logo1 from "../../assets/usd-coin-usdc-logo1.svg";
+import logo1 from "./../../assets/T.svg";
+import logo from "../../assets/usdc.svg";
 function Tabs() {
 	return (
 		<div className="farm-cards">

@@ -4,6 +4,8 @@ import logo from "./../../assets/R.svg";
 import logo1 from "../../assets/T.svg";
 import Form from "../../components/form/Form";
 import Tabs from "../../components/tabs/Tabs";
+// import tulpan from
+import tulpan from "../../assets/tulpan.svg";
 
 function Farm() {
 	const farm = false;
@@ -23,7 +25,7 @@ function Farm() {
 						<span>/</span>
 						<div className="title-icon">
 							<div className="title-icon-image">
-								<img width={14} height={14} src={logo} alt="" />
+								<img width={14} height={14} src={tulpan} alt="" />
 							</div>
 							<div className="title-icon-text">Tulip</div>
 						</div>

@@ -2,6 +2,8 @@ import React from "react";
 import "./addCollateral.scss";
 import logo1 from "./../../assets/T.svg";
 import logo from "../../assets/R.svg";
+import sol from "../../assets/stSOL.svg";
+import tulpan from "../../assets/tulpan.svg";
 import { Link, NavLink, Outlet } from "react-router-dom";
 
 function AddCollateral() {
@@ -14,7 +16,7 @@ function AddCollateral() {
 					<div className="page-info-title">
 						<div className="poolrow-title-icons collateral-title-icons">
 							<div className="title-icon">
-								<img width={27} height={27} src={logo1} alt="" />
+								<img width={27} height={27} src={sol} alt="" />
 							</div>
 							<div className="title-icon">
 								<img width={27} height={27} src={logo1} alt="" />
@@ -32,7 +34,7 @@ function AddCollateral() {
 								<span>/</span>
 								<div className="title-icon">
 									<div className="title-icon-image">
-										<img height={13} width={13} src={logo} alt="" />
+										<img height={13} width={13} src={tulpan} alt="" />
 									</div>
 									<div className="title-icon-text">Tulip</div>
 								</div>
